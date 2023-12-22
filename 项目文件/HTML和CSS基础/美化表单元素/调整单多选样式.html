@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>漂亮的单多选框</title>
+    <style>
+        div.radio{
+            width: 15px;
+            height: 15px;
+            border: 1px solid #999;
+            border-radius: 50%;
+            cursor: pointer;
+            position: relative;
+        }
+
+        div.radio.checked{
+            border-color:#008c8c;
+        }
+        .radio.checked::after{
+            content: "";
+            display: block;
+            height: 5px;
+            width: 5px;
+            border-radius: 50%;
+            background-color:  #008c8c;
+            position: absolute;
+            left: 5px;
+            top: 5px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="radio checked">
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .test{
+      width: 200px;
+      height: 200px;
+      background-color: #008c8c;
+      transition: all 0.8s ease ;
+      display: inline-block;
+    }
+
+    .test:hover{
+      width: 400px;
+      height: 400px;
+      background-color: lightblue;
+    }
+
+    .hp{
+      width: 200px;
+      height: 10px;
+      border: 1px solid red;
+      border-radius: 3px;
+      margin-top: 50px;
+      overflow: hidden;
+      display: inline-block;
+      
+    }
+
+  
+
+    .hp-in{
+      height: 100%;
+      width: 50%;
+      background-color: red;
+      transition: width 0.5s;
+    }
+
+    .hp:hover .hp-in{
+      height: 100%;
+      width: 90%;
+      background-color: red;
+    }
+
+
+    .mi-logo{
+      border: 1px solid #ff6a00;
+      width: 192px;
+      height: 192px;
+      margin: 30px 20px;  
+      background-color: #ff6a00;
+      transition: all 0.5s ease-in-out;
+    }
+    
+    .mi-logo:hover{
+      border-radius: 70px;
+      overflow: hidden;
+    }
+
+    .test1{
+      width: 400px;
+      height: 500px;
+      background-color: lightblue;
+      display: block;
+      border: 1px solid red;
+      transition: all 0.8s ease-in ;
+    }
+
+    .test1:hover{
+      width: 500px;
+      height: 400px;
+      background-color: red;
+      border: 1px dashed lightblue;
+    }
+  </style>
+</head>
+<body>
+  <div class="test">
+
+  </div>
+
+  <div class="hp">
+    <div class="hp-in">
+
+    </div>
+
+  </div>
+
+  <div class="mi-logo">
+    <img src="./logo-mi2.png" alt="">
+  </div>
+
+  <div class="test1">
+
+  </div>
+</body>
+</html>

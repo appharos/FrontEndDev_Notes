@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        需求分析：
+
+        /* 1. 当我们屏幕大于等于768像素，我们给布局容器container宽度为750px。
+        2. container里面包含8个小i 盒子，每个盒子的宽度定为93.75px(750/8)，高度为30px，浮动一行显示
+        3. 当我们屏幕缩放，宽度小于768像素的时候，container盒子宽度修改为100%宽度
+        4. 此时里面的8个小i，宽度修改为33.33%，这样一行就只能显示3个小i，剩余下行显示 */
+        * {
+            padding: 0px;
+            margin: 0px;
+
+        }
+
+        ul {
+            list-style: none
+        }
+
+        .container {
+            width: 750px;
+            margin: 0 auto;
+        }
+
+        li {
+            float: left;
+            width: 93.75px;
+            text-align: center;
+            height: 30px;
+            background-color: green;
+            color: #fff;
+        }
+
+        @media screen and (max-width:767px) {
+            .container {
+                width: 100%;
+            }
+
+            li {
+                width: 33.33%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <ul>
+            <li>导航栏</li>
+            <li>导航栏</li>
+            <li>导航栏</li>
+            <li>导航栏</li>
+            <li>导航栏</li>
+            <li>导航栏</li>
+            <li>导航栏</li>
+            <li>导航栏</li>
+        </ul>
+    </div>
+</body>
+
+</html>

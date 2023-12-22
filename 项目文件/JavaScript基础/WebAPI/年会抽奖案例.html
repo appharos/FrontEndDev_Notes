@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>年会抽奖案例</title>
+  <style>
+    .container{
+      border: 1px solid red;
+      width: 1000px;
+      height: 500px;
+      margin: 30px auto;
+      text-align: center;
+      
+    }
+   
+  </style>
+</head>
+<body>
+  
+  <!-- 从数组随机抽取一等奖、二等奖和三等奖，显示到对应的标签里面 -->
+
+  <div class="container">
+    <h2 class="title">传智教育年会抽奖</h2>
+    <h1 class="first_rank">一等奖：
+      <span>1</span>
+    </h1>
+    <h2 class="sec_rank">二等奖：
+      <span>2</span>
+    </h2>
+    <h3 class="thd_rank">三等奖：
+      <span>3</span>
+    </h3>
+
+
+  </div>
+  <script>
+    const arr = ['周杰伦', '刘德华', '周星驰', '张学友','林俊杰']
+
+    const temp_arr = document.querySelectorAll('.container span')
+    
+    
+    console.log(temp_arr)
+
+    let temp = temp_arr.length
+    for (let i = 0; i < temp; i++) {
+      let num = Math.floor(Math.random() * arr.length)
+      console.log(arr[num])
+      temp_arr[i].innerText = arr[num]
+      arr.splice(num,1)
+    }
+
+
+  </script>
+</body>
+</html>

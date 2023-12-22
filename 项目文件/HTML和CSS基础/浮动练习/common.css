@@ -1,0 +1,24 @@
+/* 多页面通用样式 */
+
+.pager{
+    margin:2em 0;
+    text-align: center;
+    
+
+}
+
+.pager a{
+    border:1px solid #d8d8d8;
+    padding: 5px 10px;
+    margin: 0 3px;
+}
+
+.pager a:hover{
+    border-color: #ef4248;
+}
+
+.pager a.activated{
+    background-color: #ef4248;
+    border:none;
+    border-color: #fff;
+} 

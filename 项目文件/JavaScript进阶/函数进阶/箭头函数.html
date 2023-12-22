@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 箭头函数基本形式
+        const fn = (x, y) => {
+            console.log(x + y)
+        }
+        fn(2, 3)
+
+        // 只有一个形参的时候，可以省略小括号
+        const fn_2 = x => {
+            console.log(x)
+        }
+        fn_2(2)
+
+        // 函数体里只有一行代码的时候，可以省略大括号
+        const fn_3 = x => console.log(x)
+        fn_3(2)
+
+        // 只有一行代码的时候，可以省略return
+        const fn_4 = (x, y) => x + y
+        console.log(`求和函数的结果是${fn_4(2, 2)}`)
+
+        // 箭头函数可以直接返回一个对象
+        const fn1 = uname => ({ uname: uname })
+        console.log(fn1('作为对象传递进形参'))
+
+
+        // 利用箭头函数求和
+        const getSum = (...args) => {
+            let sum = 0
+            for (let elements of args) {
+                sum += elements
+            }
+            return sum
+        }
+
+        const result = getSum(3, 5)
+        console.log(result)
+
+
+
+        // 对象方法中箭头函数的this指向
+        const myObject = {
+            myMethod: () => {
+                console.log(this); // 这里的 this 不是 myObject
+            }
+        };
+
+        myObject.myMethod(); // 不是 myObject，而是定义 myMethod 时的外层 this
+
+    </script>
+</body>
+
+</html>

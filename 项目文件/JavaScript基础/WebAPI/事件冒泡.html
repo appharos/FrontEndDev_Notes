@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grandfather{
+            width: 600px;
+            height: 600px;
+            background-color: lightgrey;
+        }
+        .father{
+            width: 400px;
+            height: 400px;
+            background-color: lightblue;
+        }
+        .son{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="grandfather">
+        <div class="father">
+            <div class="son"></div>
+        </div>
+    </div>
+    <script>
+        const grandfather = document.querySelector('.grandfather')
+        const father = document.querySelector('.father')
+        const son = document.querySelector('.son')
+
+        grandfather.addEventListener('click', function(e){
+            alert('我是爷爷')
+            
+        })
+        father.addEventListener('click', function(e){
+            alert('我是爸爸')
+            
+        })
+        son.addEventListener('click', function(e){
+            alert('我是儿子')
+            // 阻止流动传播
+            e.stopImmediatePropagation()  
+        })
+    </script>
+</body>
+</html>

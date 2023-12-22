@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>猜数字游戏</title>
+
+</head>
+
+<body>
+  <script>
+    /* 需求：程序随机生成一个1~10之间的一个数字，用户输入一个数字
+    1. 如果大于该数字，就提示，数字猜大了，继续猜
+    2. 如果小于该数字，就提示，数字猜小了，继续猜
+    3. 如果猜对了，就提示猜对了，程序结束 */
+
+    let temp_num = Math.floor(Math.random() * 10) + 1;
+
+    let j = true;
+    while (j) {
+      let user_num = +prompt("请输入一个1~10间的数字。");
+
+      if (user_num > 10) {
+        console.log('游戏中止');
+        j = false;
+      } else if (user_num > temp_num) {2
+        console.log('数字猜大了，请继续猜！');
+      } else if (user_num < temp_num) {
+        console.log('数字猜小了，请继续猜！');
+      } else {
+        console.log(`恭喜你猜对了！答案就是${temp_num}`);
+        j = false;
+      }
+    }
+
+  </script>
+
+</body>
+
+</html>

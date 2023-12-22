@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function Two_num_sum(a,b) {
+      return a + b
+    }
+
+    function Total_sum(){
+      let sum = 0
+      for (let i = 0; i <= 100; i++) {
+        sum += i
+      }
+      return sum
+    }
+
+    let num1 = +prompt('请输入第一个求和数字')
+    let num2 = +prompt('请输入第二个求和数字')
+
+    document.write(`你输入的两个数字的和是${Two_num_sum(num1, num2)}<br>`)
+
+    document.write(`1-100之间所有数字的和是${Total_sum()}<br>`)
+    
+
+  </script>
+</body>
+</html>

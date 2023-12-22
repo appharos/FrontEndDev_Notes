@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .nav{
+      width: 500px;
+      height: 500px;
+      background-color:  lightblue;
+      margin: 100px auto
+    }
+
+    .test{
+      color: red;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <div class="nav">123</div>
+
+
+  <script>
+    // 获取元素
+    const temp = document.querySelector('.nav')
+
+    // 添加类名 使用className,如果要保留原样式，则保留原来类名
+    temp.className = 'test nav'
+  </script>
+</body>
+</html>

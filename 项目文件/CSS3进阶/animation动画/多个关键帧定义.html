@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .test{
+      width: 300px;
+      height: 300px;
+      background-color: lightblue;
+      animation: move 3s linear 1s 2 alternate;
+      border-radius: 20%;
+      
+
+    }
+
+    @keyframes move{
+      0%{
+        transform: translate(0,0);
+      }
+      25%{
+        transform: translate(800px,0) rotate(90deg);
+        background-color: pink;
+      }
+      50%{
+        transform: translate(800px,400px) rotate(180deg);
+        background-color: #008c8c;
+      }
+      75%{
+        transform: translate(0,400px) rotate(270deg);
+        background-color: pink;
+      }
+      100%{
+        transform: translate(0,0) rotate(360deg);
+        background-color: lightblue;
+      }
+    }
+
+    
+  </style>
+</head>
+<body>
+  <div class="test"></div>
+
+  <div class="test1">
+
+  </div>
+</body>
+</html>

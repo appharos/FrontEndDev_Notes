@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .test{
+      width: 500px;
+      height: 500px;
+      background-color: lightblue;
+      margin: 100px auto;
+      overflow: hidden;
+      position: relative;
+      
+    }
+
+    .father{
+      width: 100px;
+      height: 100px;
+      border: 1px solid #008c8c;
+      margin: 100px auto;
+      background-color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .son{
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      transition: all 1s;
+      transform-origin: left top;
+      
+      
+    }
+
+    .father:hover .son{
+      transform: rotate(-90deg);
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="test">
+    <div class="father">
+      <div class="son">
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>

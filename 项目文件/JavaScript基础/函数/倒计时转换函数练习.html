@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function time_transition(time){
+      let hour = 0;
+      let minute = 0;
+      let second = 0;
+
+
+      /* 使用 `~~`操作符这是一个位运算符的hack，它实际上去掉了小数点后的数字，并保留了整数部分。
+      但请注意，这一操作不适用于大于32位的整数。 */
+      hour = ~~(time / 3600);
+      minute = ~~ (time / 60 - hour * 60);
+      second = ~~ (time - hour * 3600 - minute * 60);
+
+      console.log(`你输入的时间经过换算后为${hour}小时${minute}分钟${second}秒！`);
+
+    }
+    26000
+    let num = +prompt("请输入你想转换的秒数！");
+    time_transition(num);
+  </script>
+</body>
+</html>

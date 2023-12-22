@@ -1,0 +1,43 @@
+/* 用户输入栏开始 */
+.container{
+    width: 100%;
+}
+
+.container .user_item{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: lightblue;
+    height: 100px;
+}
+
+.container .user_item .user_icon{
+    flex: 1;
+}
+
+.container .user_item textarea{
+    flex: 1;
+    padding: 10px 10px;
+    border: 2px solid #f1f2f3;
+    height: 80px;
+    box-sizing: border-box;
+    transition: height 0.5s;
+}
+
+.container .user_item textarea:focus{
+   height: 100px;
+   border: 2px solid #f1f2f3;
+}
+
+.container .user_item button{
+    flex: 1;
+}
+
+/* 用户输入栏结束 */
+
+
+
+
+
+
+/* 评论区开始 */

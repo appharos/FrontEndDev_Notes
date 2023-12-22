@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="delete">删除</button>
+    <button id="login">登录</button>
+    <script>
+        // 1. Modal 构造函数封装 - 模态框
+        // 给两个形参title和message默认值'',防止实参没有传递数据
+        function Modal(title = '', message = '') {
+            // 创建modal 模态框盒子
+            this.modalBox = document.createElement('div')
+            // 给div标签添加类名为modal
+            this.modalBox.className = 'modal'
+            // modal盒子内部填充 2个div标签并且修改文字内容
+            this.modalBox.innerHTML = `
+            <div class="header">${title} <i>x<i></div>
+            <div class="body">${message}</div>
+            `
+
+            console.log(this.modalBox);
+        }
+
+        // new Modal('温馨提示', '您没有权限删除操作')
+        // new Modal('友情提示', '您还没有登录呢')
+
+        // 2.给构造函数原型对象挂载open方法
+        Modal.prototype.open = function () {
+            document.body.append(this.modalBox)
+        }
+
+        document.querySelector('#delete').addEventListener('click', () => {
+            // 先调用
+            const temp = new Modal('温馨提示', '您没有权限删除操作')
+            // 实例对象调用open方法
+            temp.open()
+        })
+
+    </script>
+</body>
+
+</html>

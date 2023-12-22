@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" value="computer">
+  <input type="checkbox" name="" id="" >
+  <button>点击</button>
+
+  <script>
+    const temp = document.querySelector('input')
+
+    console.log(temp.value)
+
+    temp.value = 'science'
+    console.log(temp.value)
+
+    // 复选框选中状态更改
+    const temp_1 = document.querySelector('input[type="checkbox"]')
+    console.log(temp_1.checked)
+    temp_1.checked = true
+
+    // 按钮可点击状态更改   disabled属性默认false
+    const temp_2 = document.querySelector('button')
+    temp_2.disabled = true
+  </script>
+</body>
+</html>

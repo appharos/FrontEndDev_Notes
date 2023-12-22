@@ -1,0 +1,43 @@
+.main img{
+    width: 100%;
+}
+
+.modal{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal .container{
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 404px;
+    height: 512px;
+    box-sizing:border-box;
+    padding: 1em;
+    border-radius: 6px;
+
+}
+.modal .container .close{
+    height: 30px;
+    width: 30px;
+    background-color:red;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    /* 表示悬停时鼠标样式变为手型 */
+    cursor: pointer;
+}  

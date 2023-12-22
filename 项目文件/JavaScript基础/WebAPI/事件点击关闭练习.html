@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 500px;
+            height: 500px;
+            color: black;
+            text-align: center;
+            margin: 100px auto;
+            line-height: 500px;
+            background-color: pink;
+            font-size: 3ch;
+            font-weight: 200;
+            position: relative;
+        }
+
+        .no-display{
+            display: none;
+        }
+        .container .close-item{
+            width: 50px;
+            height: 50px;
+            background-color: lightblue;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        我是广告
+        
+        <button class="close-item"></button>
+    </div>
+
+    <script>
+        const btn = document.querySelector('.container .close-item')
+        const temp = document.querySelector('.container')
+        btn.addEventListener('click', function(){
+            // 使用classList方法
+            // temp.classList.toggle('no-display')
+            // 直接使用style调整元素属性
+            temp.style.display = 'none'
+        })
+    </script>
+</body>
+</html>

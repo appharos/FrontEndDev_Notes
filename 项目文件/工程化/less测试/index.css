@@ -1,0 +1,33 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  color: #008c8c;
+}
+.list li {
+  margin: 1em;
+}
+.list li:hover {
+  background-color: #008c8c;
+  color: #fff;
+}
+.header {
+  color: black;
+}
+.header .navgation {
+  font-size: 12px;
+}
+.header .navgation h1 {
+  font-size: 3em;
+}
+.header .logo {
+  width: 300px;
+}
+.header .logo.hover {
+  width: 320px;
+}
+.a {
+  border-radius: 5px;
+}
+.b {
+  border-radius: 5px;
+}

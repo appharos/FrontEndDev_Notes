@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p class="temp_text"></p>
+    <!-- 数据地址:http://hmajax.itheima.net/api/province -->
+    <!-- axios库导入 -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- 使用axios函数 -->
+    <script>
+        axios({
+            url: 'http://hmajax.itheima.net/api/province'
+        }).then(result => {
+            console.log(result);
+            console.log(result.data.list.join('<br>'));
+            // 把获取到的数据渲染到页面上
+            document.querySelector('.temp_text').innerHTML = result.data.list.join('<br>')
+        })
+
+    </script>
+</body>
+
+</html>

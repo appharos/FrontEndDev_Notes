@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 300px;
+            height: 300px;
+            margin: 20px auto;
+            border: 1px solid black;
+            line-height: 300px;
+            text-align: center;
+        }
+        .son {
+            width: 300px;
+            height: 300px;
+            margin: 20px auto;
+            border: 1px solid black;
+            line-height: 300px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container"></div>
+    <div class="son"></div>
+    <script>
+        const container = document.querySelector('.container')
+        function getMyDate() {
+            const date = new Date()
+            console.log(date);
+
+            // 按固定格式打印当前时间
+            console.log(`${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`);
+            console.log(`${date.getHours()}:${date.getMinutes()}`);
+
+
+            // 完成补零操作
+            let temp_mouth = date.getMonth() + 1
+            let temp_date = date.getDate()
+            let temp_hour = date.getHours()
+            let temp_minutes = date.getMinutes()
+            let temp_second= date.getSeconds()
+
+            temp_mouth = temp_mouth < 10 ? '0' + temp_mouth : temp_mouth
+            temp_date = temp_date < 10 ? '0' + temp_date : temp_date
+            temp_hour = temp_hour < 10 ? '0' + temp_hour : temp_hour
+            temp_minutes = temp_minutes < 10 ? '0' + temp_minutes : temp_minutes
+            temp_second = temp_second < 10 ? '0' + temp_second : temp_second
+
+            console.log(`${date.getFullYear()}-${temp_mouth}-${temp_date}`);
+            console.log(`${temp_hour}:${temp_minutes}`);
+            return `今天是${date.getFullYear()}-${temp_mouth}-${temp_date}   ${temp_hour}:${temp_minutes}:${temp_second}`
+        }
+
+
+        container.innerHTML = getMyDate()
+
+        // 实时刷新时间，设置定时器，每隔一秒执行一次
+        setInterval(function () {
+            container.innerHTML = getMyDate()
+        }, 1000)
+
+
+
+
+        // 快速格式化时间方法
+        const son = document.querySelector('.son')
+        const temp_time = new Date()
+        // `toLocaleString()`: 返回日期对象的日期和时间的本地化字符串表示形式。
+        son.innerHTML = temp_time.toLocaleString()
+
+    </script>
+</body>
+
+</html>

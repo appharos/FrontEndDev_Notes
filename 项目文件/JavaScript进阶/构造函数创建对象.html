@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Goods(name, price, count) {
+            this.name = 'name'
+            this.price = price
+            this.count = count
+            console.log(`我的品牌是${this.name}，单价为${this.price}元，数量为${this.count}台`)
+        }
+
+        const mi = new Goods('小米', 1999, 20)
+        console.log(mi);
+        const hua = new Goods('华为', 3999, 59)
+        const vivo = new Goods('vivo', 1888, 20)
+
+
+
+        function Animals(name, age, kind) {
+            this.name = name
+            this.age = age
+            this.kind = kind
+            this.truth = () => console.log(`我是一只${this.name}，我今年${this.age}岁，我是一只${this.kind}。`)
+
+        }
+
+        Animals.species = 'animals'  //静态属性
+        Animals.apply = function () {
+            console.log(this);    //静态方法
+        }
+        Animals.apply()
+        const Chicken = new Animals('小黄', 5, 'chicken')
+        const Butterfly = new Animals('小蓝', 2, 'butterfly')
+        console.log(Chicken.age);  //实例属性
+        Chicken.truth();   //实例方法
+        Butterfly.truth();
+
+        console.log(Animals.species);
+
+
+    </script>
+</body>
+
+</html>

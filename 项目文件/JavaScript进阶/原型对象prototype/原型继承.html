@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Human() {
+            this.ears = 2
+            this.head = 1
+        }
+
+        // 父构造函数 （父类）  子构造函数（子类）
+        // 子构造函数 = new 父类
+        // 女人 构造函数 利用prototype继承Human
+        function Woman() {
+
+        }
+        // Woman 通过原型继承Human
+        Woman.prototype = new Human()
+        // 指回原来的构造函数
+        Woman.prototype.constructor = Woman
+        const red = new Woman()
+        console.log(red);
+
+        // 给女人添加一个方法  生孩子
+        Woman.prototype.baby = function () {
+            console.log('宝贝');
+        }
+
+
+    </script>
+</body>
+
+</html>

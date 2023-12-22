@@ -1,0 +1,35 @@
+.red-big-center{
+    color: red;
+    font-size: 5em;
+    text-align: center;
+}
+
+/* /* 选中鼠标悬停时的p元素 */
+p:hover{
+    color:red;
+}
+
+
+/* 鼠标按下为松开按钮时状态 */
+p:active{     
+    color:#008c8c;
+}
+
+/* 超链接未访问时的状态 */
+a:link{
+    color:pink;
+}
+
+/* 超链接访问过后的状态 */
+a:visited{
+    color:blueviolet;
+}
+
+
+p::before {
+    content: "「";
+}
+
+p::after {
+    content: "」";
+}

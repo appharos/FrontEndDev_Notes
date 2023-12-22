@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      const arr = [100, 60, 80];
+
+      // 数组解构赋值
+      const [max, min, avg] = [100, 60, 80];
+      console.log(max);
+      console.log(min);
+      console.log(avg);
+
+      // 数组解构交换变量
+
+      let a = 1;
+      let b = 2;
+      [b, a] = [a, b];
+      console.log(a, b);
+
+      const pc = ['海尔', '联想', '小米', '方正'];
+      [hr, lx, mi, fz] = pc;
+      console.log(hr, lx, mi, fz);
+
+      //   需求：将最大值和最小值返回值解构为max和min两个变量
+
+      function getValue() {
+        return [100, 60];
+      }
+      const [max_num, min_num] = getValue();
+      console.log(max_num, min_num);
+
+      //   防止undefined传递，设置默认参数，当有实参数据传递过来时，则优先使用传递过来的数据
+      const [temp_a = 0, temp_b = 0] = [1, 2];
+      console.log(temp_a, temp_b);
+    </script>
+  </body>
+</html>

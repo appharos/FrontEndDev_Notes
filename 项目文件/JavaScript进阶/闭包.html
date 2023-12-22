@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function outer() {
+        //     const a = 1
+        //     function f() {
+        //         console.log(a)
+        //     }
+        //     f()
+        // }
+
+        // outer()
+
+        function outer(){
+            let i = 1
+            function fn(){
+                console.log(i)
+            }
+            return fn
+        }
+
+        const fun = outer()
+        fun()
+
+
+
+        //  闭包形式  统计函数调用次数
+        function count(){
+            let i = 0
+        
+            return function sum(){
+                i++
+                console.log(`函数被调用了${i}次`)
+            }
+        }
+
+        const cycle = count()
+        
+    </script> 
+</body>
+
+</html>

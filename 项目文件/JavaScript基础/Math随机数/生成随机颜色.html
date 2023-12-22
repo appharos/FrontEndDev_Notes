@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>生成随机颜色</title>
+</head>
+
+<body>
+  <script>
+    /* 需求:该函数接收一个布尔类型参数，表示颜色的格式是十六进制还是rgb格式。
+    如果参数传递的是true或者无参数，则输出 一个随机十六进制的颜色2:如果参数传递的是false，则输出 一个随机rgb的颜色图
+    格式:
+    function getRandomColor(flag)
+    console.log(getRandomColor(true)) //#ffffff
+    console.log(getRandomColor(false)) //rgb(255,255,255)分析:
+    提示: 16进制颜色格式为:#ffffff  其中f可以是任意0-f之间的字符
+    提示: rgb颜色格式为:rgb(255,255,255) 其中255可以是任意0-255之间的数字
+     */
+
+    function getRandomColor(flag = true) {
+      if (flag == true) {
+        let temp_arr = []
+        let color_code_arr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f']
+        let temp_string = '#'
+
+        for (let i = 1; i < 7; i++) {
+
+          let index = Math.floor(Math.random() * color_code_arr.length)
+          temp_arr.push(color_code_arr[index])
+        }
+        // join('')方法会将数组的所有元素连接成一个字符串，join方法传入参数为空字符，表示数组元素之间不需要加入分隔符直接拼接
+        temp_string = '#' + temp_arr.join('')
+
+        return temp_string
+      } else {
+
+        let temp_arr = []
+        let temp_string
+
+        for (let j = 0; j < 3; j++) {
+          temp_arr[j] = Math.floor(Math.random() * 256)
+        }
+
+        temp_string = `rgb(${temp_arr[0]}, ${temp_arr[1]}, ${temp_arr[2]})`
+        return temp_string
+      }
+
+    }
+
+
+    console.log(getRandomColor(true))
+    console.log(getRandomColor(false))
+
+    
+    /* ChatGPT优化算法：
+    function getRandomHexColor() {
+      const color_code_arr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'];
+      let color = '#';
+      for (let i = 0; i < 6; i++) {
+        color += color_code_arr[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+    function getRandomRgbColor() {
+      return `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+    }
+
+    function getRandomColor(flag = true) {
+      return flag ? getRandomHexColor() : getRandomRgbColor();
+    }
+
+    console.log(getRandomColor(true));  // 输出随机的十六进制颜色
+    console.log(getRandomColor(false)); // 输出随机的RGB颜色 */
+
+
+  </script>
+</body>
+
+</html>

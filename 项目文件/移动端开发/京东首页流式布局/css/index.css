@@ -1,0 +1,240 @@
+/* 通用样式开始 */
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+input,button{
+	border: none;
+	outline: none;
+	outline-offset: 0;
+}
+
+
+
+body {
+  width: 100%;
+  min-width: 320px;
+  max-width: 640px;
+  margin: 0 auto;
+  font-size: 14px;
+  font-family: -apple-system, Arial, Helvetica, sans-serif;
+  color: #666;
+  line-height: 1.5;
+  /* height: 2000px; */
+
+}
+
+
+/* 通用样式结束 */
+
+
+/* 头部部分开始 */
+
+.section header {
+  height: 45px;
+  background-color: #333;
+  color: #fff;
+
+}
+
+.section header div {
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+}
+
+.section-item1 {
+  width: 8%;
+
+}
+
+.section-item1 img {
+  width: 10px;
+
+}
+
+.section-item2 {
+  width: 10%;
+
+
+
+}
+
+.section-item2 img {
+  width: 30px;
+  vertical-align: middle;
+
+}
+
+.section-item3 {
+  width: 57%;
+}
+
+.section-item4 {
+  width: 25%;
+  background-color: #F63515;
+}
+
+
+/* 头部部分结束 */
+
+
+
+/* 搜索栏部分开始 */
+.section .search {
+  background-color: #e43130;
+  height: 44px;
+  position: fixed;
+  min-width: 320px;
+  max-width: 640px;
+  width: 100%;
+
+}
+
+.section .search .left-aside,
+.section .search .right-aside {
+  width: 40px;
+}
+
+.section .search .left-aside{
+  margin-right: 10px;
+}
+
+.section .search .left-aside img {
+  width: 20px;
+  height: 18px;
+  margin-top: 14px;
+  margin-left: 15px;
+  
+}
+
+.section .search .right-aside {
+  color: #fff;
+  position: relative;
+  margin-left: 10px;
+  width: 40px;
+  line-height: 44px;
+
+}
+
+/* .section .search .right-aside span {
+  
+  position: absolute;
+  top: 10px;
+  right: 10px;
+} */
+
+.section .search .main{
+  height: 44px;
+  overflow: hidden;
+  text-align: center;
+  line-height: 44px;
+  position: relative;
+  
+}
+
+
+.section .search .main form{
+  height: 30px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 7px auto;
+  width: 100%;
+  position: relative;
+}
+
+.section .search form .icon{
+  background: url(../img/jd.png) no-repeat;
+  background-size: 20px 15px;
+  position: absolute;
+  top: 8px;
+  left: 13px;
+  width: 15%;
+  height: 15px;
+  
+}
+
+.section .search form .icon::after{
+  content: "";
+  width: 1px;
+  height: 15px;
+  display: block;
+  background-color: #ccc;
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+
+.section .search form .son{
+  position: absolute;
+  top: 8px;
+  left: 50px;
+  width: 18px;
+  height: 15px;
+  background: url(../img/jd-sprites.png) no-repeat -81px 0;
+  background-size: 200px auto;
+}
+
+
+.section .search .main form input{
+  background-color: #f7f7f7;
+  height: 20px;
+  width: 70%;
+  font-size: 12px;
+  color: #232326;
+  position: absolute;
+  top: 4px;
+  right: 10px;
+  padding-left: 5px;
+}
+
+/* 搜索栏部分结束 */
+
+
+/* 横幅背景部分开始 */
+
+.section .main-content .slider img{
+  width: 100%;
+}
+
+
+/* 横幅背景部分结束 */
+
+
+/* nav导航栏开始 */
+
+.section nav a{
+  float: left;
+  width: 20%;
+  text-align: center;
+}
+
+.section nav img{
+  width: 40px;
+  margin: 10px 0;
+}
+
+.section nav span{
+  display: block;
+}
+
+
+
+
+/* nav导航栏结束 */
+
+
+
+

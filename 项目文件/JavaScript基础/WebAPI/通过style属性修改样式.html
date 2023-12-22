@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .test {
+      width: 500px;
+      height: 500px;
+      background-color: lightblue;
+      display: none;
+    }
+
+    body {
+      background-image: url(./imgs/bg1.png);
+      background-repeat:  no-repeat;
+      background-size: contain;
+      width: 500px;
+      height: 500px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="test">
+
+  </div>
+  <script>
+    // 获取属性
+    // const temp = document.querySelector('.test')
+
+    // temp.style.width = '1000px'
+    // // 对于有连接符的样式属性，使用小驼峰命名法修改属性，而忽略连字符
+    // temp.style.backgroundColor = 'lightgray'
+    // temp.style.borderBottom = '2px solid red'
+
+
+    function getRandom(x, y) {
+      let i = Math.floor(Math.random() * (y - x + 1)) + x
+      return i
+    }
+    for(let j = 0; j < 100; j++) {
+    console.log(getRandom(1,3));
+}
+
+
+    
+    const temp = document.body
+    let i = getRandom(1,3)
+    temp.style.backgroundImage = `url(./imgs/bg${i}.png)`
+
+  </script>
+</body>
+
+</html>

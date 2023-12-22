@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="https://www.google.com">支付成功<span>5</span>秒钟之后跳转到首页</a>
+
+    <script>
+        const sec = document.querySelector('span')
+        let n = 5
+        let IntervalId = setInterval(function(){
+            n--
+            sec.innerHTML = `${n}`
+            
+            if (n === 0){
+                clearInterval(IntervalId)
+                // 到点自动跳转页面
+                location.href = "https://www.google.com"
+            }
+        }, 1000)
+    </script>
+</body>
+</html>

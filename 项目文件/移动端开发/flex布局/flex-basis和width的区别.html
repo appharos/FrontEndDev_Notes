@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flex-basis vs Width</title>
+  <style>
+    .flex-container {
+      width: 300px;
+      display: flex;
+      justify-content: flex-start;
+      background-color: lightgray;
+    }
+    .flex-item {
+      height: 50px;
+      background-color: lightblue;
+      text-align: center;
+      line-height: 50px;
+    }
+    .with-width {
+      width: 100px;
+    }
+    .with-flex-basis {
+      flex-basis: 100px;
+      flex-grow: 1;
+    }
+  </style>
+</head>
+<body>
+  <h2>Using Width</h2>
+  <div class="flex-container">
+    <div class="flex-item with-width">Width</div>
+    <div class="flex-item with-width">Width</div>
+  </div>
+
+  <h2>Using Flex-basis</h2>
+  <div class="flex-container">
+    <div class="flex-item with-flex-basis">Flex-basis</div>
+    <div class="flex-item with-flex-basis">Flex-basis</div>
+  </div>
+</body>
+</html>

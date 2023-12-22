@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .test{
+      color: red;
+      width: 300px;
+      background-color: pink;
+      height: 300px;
+    }
+  </style>
+</head>
+<body>
+  <div class="test" data-user-id="123">John</div>
+
+  <script>
+    const temp = document.querySelector('.test')
+    console.log(temp.dataset)
+
+    temp.dataset.userId = '234'
+    console.log(temp.dataset.userId)
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 自己定义数组拓展函数方法   求和  和 最大值
+        // 1. 我们定义的这个方法，任何一个数组实例对象都可以使用
+        // 2. 自定义的方法写到  数组.prototype 身上
+
+        const arr = [1, 2, 3]
+        Array.prototype.max = function () {
+            // 使用展开运算符
+            return Math.max(...this)
+            // 原型函数里面的this 指向实例对象 arr
+
+        }
+        console.log(arr.max());
+        console.log([2, 5, 9].max());
+
+
+        // 求和方法
+        Array.prototype.sum = function () {
+            return this.reduce((prev, current) => prev + current, 0)
+        }
+
+        console.log([12, 32, 231].sum());
+
+    </script>
+</body>
+
+</html>

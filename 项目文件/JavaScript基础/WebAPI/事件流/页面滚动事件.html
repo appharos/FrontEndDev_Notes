@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 3000px;
+        }
+
+        #scrollableDiv {
+            margin: 100px auto;
+            display: block;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="scrollableDiv" style="width: 200px; height: 200px; overflow: auto;">
+        <div style="height: 500px; width: 500px;"></div>
+    </div>
+    <script>
+        var div = document.querySelector('#scrollableDiv');
+        console.log(div.scrollTop);  // 输出当前滚动位置
+        div.scrollTop = 100;  // 将滚动条向下滚动100像素
+        console.log(div.scrollTop);  // 输出当前滚动位置
+
+        var div = document.getElementById('scrollableDiv');
+        console.log(div.scrollLeft);  // 输出当前水平滚动位置
+        div.scrollLeft = 100;  // 将滚动条向右滚动100像素
+        console.log();  // 输出当前水平滚动位置
+
+        // 实时输出页面当前滚动距离
+        // window.addEventListener('scroll', function () {
+        //     console.log(document.documentElement.scrollTop)
+        // }) 
+
+        const temp = document.querySelector('#scrollableDiv')
+
+        window.addEventListener('scroll', function () {
+            const n = document.documentElement.scrollTop   // 返回的的是数字型单位，可读写，不带单位
+
+
+            console.log(document.documentElement.scrollTop)
+            if (n >= 150) {
+                temp.style.visibility = 'hidden'
+            }else{
+                temp.style.visibility = 'visible'
+            }
+        })
+
+
+
+
+    </script>
+</body>
+
+</html>

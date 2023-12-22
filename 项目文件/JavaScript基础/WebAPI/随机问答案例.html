@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .clearfix {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .container {
+            width: 800px;
+            height: 500px;
+            background-color: lightblue;
+            position: relative;
+            margin: 100px auto;
+
+
+        }
+
+        div.title {
+            font-size: 30px;
+            font-weight: 3em;
+            color: black;
+            position: absolute;
+            left: 50%;
+            top: 10%;
+            transform: translateX(-50%);
+        }
+
+        .container .question-item .title {
+            font-size: 30px;
+            color: #000;
+            position: absolute;
+            left: 150px;
+            top: 200px;
+
+        }
+
+        .container .question-item .question {
+            width: 500px;
+            height: 50px;
+            position: absolute;
+            left: 200px;
+            top: 195px;
+            font-size: 15px;
+            padding: 10px 20px;
+            box-sizing: border-box;
+        }
+
+        .container .btn-item {
+            width: 500px;
+            height: 100px;
+            position: absolute;
+            /* background-color: pink; */
+            left: 154px;
+            bottom: 94px;
+        }
+
+        .container .btn-item button {
+            width: 70px;
+            height: 30px;
+
+        }
+
+        .container .btn-item button.start {
+            float: left;
+            margin-top: 30px;
+            margin-left: 30px;
+        }
+
+        .container .btn-item button.close {
+            float: right;
+
+            margin-top: 30px;
+            margin-right: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 1. 点击开始按钮随机抽取数组的一个数据，放到页面中
+    2. 点击结束按钮删除数组当前抽取的一个数据
+    3. 当抽取到最后一个数据的时候，两个按钮同时禁用（写点开始里面，只剩最后一个数据不用抽了） -->
+
+    <div class="container clearfix">
+        <div class="title">随机问答</div>
+        <div class="question-item">
+            <div class="title">问题是：</div>
+            <input type="text" class="question">
+        </div>
+
+        <div class="btn-item clearfix">
+            <button class="start">开始</button>
+            <button class="close">结束</button>
+        </div>
+
+    </div>
+
+
+    <script>
+        const QuestionList = [
+            { text: 'HTML 中，哪个元素用于插入多行的文本输入字段？' },
+            { text: '在 CSS 中，如果你想选择所有的段落元素 (<p>) 并设置其文字颜色为蓝色，应该如何编写这个规则？' },
+            { text: '在 JavaScript 中，如何弹出一个对话框显示 "Hello, World!"' },
+            { text: '在 CSS 中，如果你想为页面上的所有图片 (<img>) 设置一个边框，应该如何编写这个规则？' },
+            { text: '在 HTML5 中，哪个元素用于表示独立的内容，例如博客文章或论坛帖子？' },
+            { text: '在 JavaScript 中，如何获取一个 id 为 "myElement" 的元素' },
+            { text: '哪个 HTML 元素用于定义一个下拉选择列表？' },
+        ]
+
+        // 获取问题输入框
+        const question_input = document.querySelector('.container .question-item .question')
+
+        // 获取开始键和结束键
+        const btn_start = document.querySelector('.container .btn-item button.start')
+        const btn_close = document.querySelector('.container .btn-item button.close')
+
+        let intervalId
+        let num_random
+
+
+        // 点击开始键，生成随机问题
+        btn_start.addEventListener('click', function () {
+            // 清除之前的interval，确保只有一个定时器在运行
+            clearInterval(intervalId);
+
+            // 设置生成数组长度随机数    
+            intervalId = setInterval(function () {
+
+                num_random = Math.floor(Math.random() * QuestionList.length)
+                question_input.value = QuestionList[num_random].text
+            }, 50)
+            if (QuestionList.length === 1) {
+                btn_start.disabled = true
+                btn_close.disabled = true
+            }
+        })
+
+
+        // 点击结束键，选中问题
+        btn_close.addEventListener('click', function () {
+
+            clearInterval(intervalId)
+            QuestionList.splice(num_random, 1)
+
+
+        })
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

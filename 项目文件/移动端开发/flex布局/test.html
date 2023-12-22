@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Align-Self Example</title>
+  <style>
+    .flex-container {
+      display: flex;
+      flex-direction: column;
+      height: 300px;
+      align-items: flex-start;
+    }
+    
+    .flex-item {
+      width: 100px;
+      height: 100px;
+    }
+    
+    .flex-item:nth-child(1) {
+      background-color: red;
+    }
+    
+    .flex-item:nth-child(2) {
+      background-color: green;
+      align-self: center;
+    }
+    
+    .flex-item:nth-child(3) {
+      background-color: blue;
+      align-self: flex-end;
+    }
+  </style>
+</head>
+<body>
+  <div class="flex-container">
+    <div class="flex-item"></div>
+    <div class="flex-item"></div>
+    <div class="flex-item"></div>
+  </div>
+</body>
+</html>

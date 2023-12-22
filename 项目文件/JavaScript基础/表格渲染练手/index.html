@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./reset.css">
+  <style>
+    h1{
+      text-align: center;
+      font-weight: bold;
+      font-size: 2em;
+      margin: 20px;
+    }
+    table{
+      /* 合并相邻边框 */
+      border-collapse: collapse;
+      margin: 0 auto;
+      
+    }
+    th{
+      font-weight: bold;
+    }
+    th,td{
+      border: 1px solid #ddd;
+      text-align: center;
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+ 
+  <script>
+    let num = Number(prompt('请输入购买的数量'))
+    let address = prompt('请输入收货地址')
+    let total = num * 1999
+
+// 由于还未学DOM操作，使用反引号``和${}将更新后的变量结果输出到表格里
+    document.write(`
+    <h1>订单确认</h1>
+  <table>
+    <tr>
+      <th>商品名称</th>
+      <th>商品价格</th>
+      <th>商品数量</th>
+      <th>总价</th>
+      <th>收获地址</th>
+    </tr>
+    <tr>
+      <td>小米青春版PLUS</td>
+      <td>1999</td>
+      <td>${num}个</td>
+      <td>${total}元</td>
+      <td>${address}</td>
+    </tr>
+  </table>
+    `)
+
+
+  </script>
+</body>
+</html>

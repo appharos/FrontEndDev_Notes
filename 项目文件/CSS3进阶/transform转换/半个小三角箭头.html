@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* .shape{
+      width: 100px;
+      height: 100px;
+      margin: 100px auto;
+      border: 1px solid black;
+      border-top: none;
+      border-left: none;
+      transform: rotate(45deg);
+    } */
+
+    .border{
+      width: 300px;
+      height: 50px;
+      border: 1px solid lightblue;
+      margin: 300px auto;
+      position: relative;
+    }
+
+    .border::after{
+      content: "";
+      /* display: block; */
+      border: 1px solid black;
+      width: 12px;
+      height: 12px;
+      position: absolute;
+      top: 20px;
+      right: 16px;
+      transform: rotate(45deg);
+      border-top: none;
+      border-left: none;
+      transition: all 1s;
+
+    }
+
+    .border:hover::after{
+      
+      border-top: 1px solid black;
+      border-left: 1px solid black;
+      border-right: none;
+      border-bottom: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="border">
+
+  </div>
+  
+</body>
+</html>

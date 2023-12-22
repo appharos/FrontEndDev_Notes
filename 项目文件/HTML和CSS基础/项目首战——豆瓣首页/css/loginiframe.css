@@ -1,0 +1,310 @@
+@import "reset.css";
+@import "common.css";
+
+
+/* 统一设置 */
+a{
+    color: #41ac52;
+}
+
+input[type="text"], input[type="password"]{
+    width: 100%;
+    border: 1px solid #e4e6e5;
+    box-sizing: border-box;
+    height: 34px;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+/* 统一设置结束 */
+
+.container{
+    width: 300px;
+    height: 300px;
+    line-height: 2;
+    padding: 30px 10px 10px 10px;
+    color: #9b9b9b;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.container .login .switch-menu{
+    border-bottom: 1px solid #ececec;
+    font-size: 12px;
+}
+
+.container .login .switch-menu span{
+    width: 50%;
+    text-align: center;
+}
+
+.container .login .switch-menu span.selected{
+    color: #333;
+    font-weight: 600;
+    border-bottom: 1px solid #494949;
+    margin-bottom: -1px;
+
+}
+
+.container .login .form .form-item{
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.container .login .form .form-item .account-form-tips{
+    
+    box-sizing: border-box;
+}
+
+.container .login .form .form-item .account-form-tips .text{
+    font-size: 12px;
+    display: inline-block;
+}
+
+.container .login .form .form-item .account-form-tips a{
+    
+    font-size: 13px;
+}
+
+.container .login .form .form-item .tel-number{
+    padding: 8px 40px 8px 60px;
+    
+}
+
+.container .login .form .form-item .country-code{
+    position: absolute;
+    width: 51px;
+    height: 28px;
+    text-align: center;
+    line-height: 28px;
+    top: 4px;
+    left: 0;
+    font-size: 15px;
+    font-weight: 700;
+    color: #333;
+    border-right: 1px solid #dfdfdf;
+    cursor: pointer;
+    
+
+}
+
+
+.container .login .form .form-item .country-code .choose-code{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    /* display: none; */
+
+}
+
+.container .login .form .form-item .country-code .choose-code .center{
+    position: absolute;
+    height: 260px;
+    width: 270px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    background-color: #fff;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    cursor: auto;
+
+}
+
+.container .login .form .form-item .country-code .choose-code .center .title{
+    background-color: #ebf5eb;
+    height: 42px;
+    line-height: 42px;
+    text-align: left;
+    font-weight: bold;
+    padding-left: 10px;
+    color: #060;
+}
+
+.container .login .form .form-item .country-code .choose-code .center ul{
+    height: 180px;
+    overflow: auto;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+    /* padding-bottom: 5px; */
+}
+
+.container .login .form .form-item .country-code .choose-code .center ul li{
+    height: 38px;
+    line-height: 38px;
+    border-top: 1px solid #e5e5e5;
+    cursor: pointer;
+
+}
+
+.container .login .form .form-item .country-code .choose-code .center ul li:last-child{
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.container .login .form .form-item .country-code .choose-code .center ul li .right{
+    font-weight: normal;
+    color: #aaa;
+
+}
+
+.container .login .form .form-item .country-code .choose-code .center ul li.selected{
+    color: #42bd56;
+}
+
+.container .login .form .form-item .country-code .choose-code .center ul li.selected .right{
+    color: inherit;
+}
+
+.container .login .form .form-item .country-code .choose-code .center ul li.selected .iconfont{
+    margin-left: 8px;
+}
+
+
+.container .login .form .form-item .verification-code{
+    padding: 8px 10px 8px 10px;
+}
+
+.container .login .form .form-item .get-code{
+    position: absolute;
+    top: 5px;
+    font-size: 13px;
+    right: 7px;
+}
+
+.container .login .form .form-item .btn{
+    width: 100%;
+    height: 34px;
+    font-weight: 400;
+    line-height: 34px;
+}
+
+.container .login .form .form-item .help-link{
+    font-size: 13px;
+}
+
+.container .login .pwd-login .form-item a.fwd-link{
+    font-size: 12px;
+}
+
+.container .login .form .pwd-login .form-item .fwd-link{
+    margin-top: 8px 
+}
+
+.container .login .form .pwd-login .form-item input.account-input{
+    padding: 8px 40px 8px 20px;
+}
+
+.container .login .form .pwd-login .form-item input.account-pwd-input{
+    padding: 8px 40px 8px 20px;
+}
+
+.container .login .form .pwd-login .form-item .login-abroad{
+    font-size: 13px;
+}
+
+.container .login .bottom{
+    border-top: 1px solid #ddd;
+
+}
+
+.container .login .bottom ._3rd-login{
+    color: #9b9b9b;
+    font-size: 11px;
+    text-align: center;
+    vertical-align: 1px;
+}
+
+.container .login .bottom .iconfont{
+    height: 22px;
+    margin: 0 0 0 12px;
+    width: 22px;
+}
+
+.container .login .bottom .icon-weixin{
+    color: #64c574;
+}
+
+.container .login .bottom .icon-weibo{
+    color: #f27272;
+}
+
+.container .QRcode .account-tab-scan{
+    color: #333;
+    font-weight: 600;
+    text-align: left;
+    font-size: 12px;
+    border-bottom: 1px solid #ececec;
+}
+
+.container .QRcode .account-QR-scan{
+    margin-top: 20px;
+    width: 170px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.container .QRcode .account-QR-text{
+    background-color: rgba(0,0,0,.08);
+    color: #494949;
+    text-align: center;
+    border-radius: 12px;
+    padding: 3px 5px;
+    margin-top: 10px;
+    
+}
+
+.container .change{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.container .change .icon{
+    width: 30px;
+    height: 30px;
+    display: block;
+}
+
+.container .change .icon-QRcode{
+    background: url(../img/doubanQRcode.png) no-repeat left top/100% 100%;
+}
+
+.container .change .icon-PC{
+    background: url(../img/doubanPC.png) no-repeat left top/100% 100%;
+}
+
+.container .switch-text{
+    background: #f5faf9;
+    border: 1px solid rgba(66,189,86,.3);
+    border-radius: 3px;
+    color: #666;
+    display: block;
+    font-size: 13px;
+    height: 20px;
+    padding: 3px 5px;
+    position: absolute;
+    right: 50px;
+    top: 10px;
+    line-height: 20px;
+    display: none;
+    
+}
+
+.container .change:hover+.switch-text{
+    display: inline;
+}
+
+

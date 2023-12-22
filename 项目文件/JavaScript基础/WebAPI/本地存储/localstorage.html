@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // localStorage.setItem('uname', 'pink老师')
+        localStorage.setItem('uname', 'pharos')
+        localStorage.setItem('uname_1', 'pharos_1')
+
+        // 获取
+        console.log(localStorage.getItem('uname'))
+
+        // 删除本地存储，只删除名字
+        localStorage.removeItem('uname')
+        
+        // 修改
+        localStorage.setItem('uname_1', 'appharos')
+
+
+        // 本地存储只能存储字符串数据类型
+        localStorage.setItem('age', 18)
+        console.log(localStorage.getItem('age'));
+        
+    </script>
+</body>
+</html>

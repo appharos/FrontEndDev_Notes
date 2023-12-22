@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(/^java$/.test('java'))  // true
+        console.log(/^java$/.test('JAVA'))  //false
+        console.log(/^java$/i.test('JAVA'))  //ttue, i修饰符使正则规则无视大小写
+
+        const str = 'java是一门编程语言，学完JAVA工资很高'
+
+        const re = str.replace(/java/ig, '前端')   // g修饰符进行全局匹配，使得replace不会只匹配一次，而是对全局字符串进行匹配
+        console.log(re);
+    </script> 
+</body>
+</html>

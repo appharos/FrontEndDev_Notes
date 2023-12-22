@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      /* 给父级盒子添加flex属性 */
+      display: flex;
+      width: 800px;
+      height: 300px;
+      background-color: pink;
+      /* 将y轴设置为主轴 */
+      flex-direction: column;
+
+
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      align-content: space-between;
+      /* align-content: stretch; */
+    }
+
+    div span {
+      width: 150px;
+      height: 80px;
+      background-color: lightblue;
+      margin: 10px 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+    <span>5</span>
+    <span>6</span>
+  </div>
+</body>
+
+</html>

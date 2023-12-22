@@ -1,0 +1,247 @@
+
+/* 通用样式开始*/
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+a{
+    color:#666;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* 通用样式结束 */
+
+
+
+/* 修改container的最大宽度为1280 根据设计稿的要求 */
+@media screen and (min-width:1280px){
+    .container{
+        width: 1280px;
+    }
+
+
+}
+
+
+/* 左侧模块开始 */
+
+.container .row header{
+    padding-left: 0;
+}
+
+.logo{
+    background-color: #429ad9;
+}
+
+.logo img{
+    /* width: 100%; */
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.nav1{
+    background-color: #eee;
+    border-bottom: 1px solid #ccc;
+}
+
+
+
+
+
+.nav1 ul li a{
+    display: block;
+    height: 50px;
+    width: 100%;
+    line-height: 50px;
+    padding-left: 30px;
+    font-size: 16px;
+}
+
+/* 当我们进入小屏幕还有超小屏幕的时候  我们nav里面的li 浮动起来  并且宽度为20% */
+@media  screen and (max-width:991px) {
+    .nav1 ul li a{
+        float: left;
+        width: 20%;
+    }
+
+    article{
+        margin-top: 10px;
+    }
+}
+
+/* 当我们进入超小屏幕的时候  我们nav里面的li 浮动起来  并且宽度为20% */
+
+@media  screen and (max-width:767px) {
+    .nav1 ul li a{
+        font-size: 10px;
+        padding-left: 7px;
+    }
+}
+
+
+.nav1 a:hover{
+    background-color: #fff;
+    color: #333;
+     
+}
+
+
+/* 1. 我们如果进入了超小屏幕下，logo里面的图片就隐藏起来 */
+
+/* 2. 我们事先准备好一个盒子， 在logo里面，他平时是隐藏起来的，只有在超小屏幕下显示 */
+
+.logo span{
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+}
+
+
+
+
+
+
+/* 左侧模块结束 */
+
+
+
+
+
+/* 新闻栏开始 */
+
+.news li{
+    float: left;
+    width: 25%;
+    height: 128px;
+    padding-right: 10px;
+    margin-bottom: 10px;
+}
+
+.news li:nth-child(1){ 
+    width: 50%;
+    height: 266px; 
+}
+
+/* 当我们进入超小屏幕的时候  我们news里面的li宽度变化 */
+
+@media  screen and (max-width:767px) {
+
+    .news li{
+        width: 50%;
+    }
+
+
+    .news li:nth-child(1){ 
+        width: 100%;
+    }
+}
+
+
+.news li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.news li a img{
+    width: 100%;
+    height: 100%;
+}
+
+.news li a .desc{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    font-size: 12px;
+    
+    width: 100%;
+    height: 41px;
+    color: #fff;
+    padding: 0 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space: normal;
+}
+
+.news li:nth-child(1) a .desc{
+    font-size: 20px;
+    line-height: 41px;
+}
+
+
+
+/* 新闻栏结束 */
+
+
+/* 发表栏开始 */
+.publish {
+    border-top: 1px solid lightgrey;
+
+}
+
+.publish .row{
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}
+
+
+
+.publish .pic{
+    margin-top: 10px;
+}
+
+.publish .pic img{
+    width: 100%;
+}
+
+
+
+/* 发表栏结束 */
+
+/* 右侧模块开始 */
+.banner{
+    width: 100%;
+}
+
+aside .banner img{
+    width: 100%;
+} 
+
+.hot{
+    border: 1px solid #ccc;
+    display: block;
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.hot span{
+    border-radius: 0;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+/* 右侧模块结束 */

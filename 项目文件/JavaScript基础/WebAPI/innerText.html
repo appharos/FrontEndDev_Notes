@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="box">
+    我是div的内容
+    <span>
+      我是span里面的内容
+    </span>
+
+  </div>
+
+  <script>
+
+    const box = document.querySelector('.box')
+    // 读取文本
+    console.log(box.innerText)
+
+    // box.innerText = '我是修改后div的内容'
+
+    // 可以识别html标签
+    console.log(box.innerHTML)
+      box.innerHTML = '<strong>我是修改后div的内容</strong>'
+  </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>获取DOM元素</title>
+</head>
+<body>
+  <div class="test">098</div>
+  <div>123</div>
+  <div>456</div>
+  <div>789</div>
+
+
+  
+
+  <ul class="temp">
+    <li>测试1</li>
+    <li>测试2</li>
+    <li>测试3</li>
+  </ul>
+
+  <p id="nav">测试机</p>
+
+  <script>
+    const temp_1 = document.querySelector('ul li')
+    console.log(temp_1)
+
+    const temp_2 = document.querySelectorAll('ul li')
+    console.log(temp_2)
+
+
+
+    // 使用for方法获取nodelist的每个对象
+    const lis = document.querySelectorAll('.temp li')
+
+    for (let i =0; i < lis.length; i++){
+      console.log(lis[i])
+    }
+
+  </script>
+</body>
+</html>

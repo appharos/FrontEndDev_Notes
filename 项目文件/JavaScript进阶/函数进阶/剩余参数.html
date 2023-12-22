@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function sum(...args) {
+            console.log(`参数的个数为${args.length}`)
+            let sum = 0
+            for (let elements of args) {
+                sum += elements
+            }
+            return sum
+        }
+        const results = sum(12, 32, 23)
+        console.log(`函数求和的结果是${results}`);
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <button>发布</button>
+    <div>123</div>
+
+    <script>
+        const btn = document.querySelector('button')
+        const text = document.querySelector('textarea')
+        const temp_output = document.querySelector('div')
+
+        btn.addEventListener('click', function(){
+            const re = text.value.replace(/激情|基情/ig, '**')
+            temp_output.innerText = re
+            text.value = ''
+
+        })
+    </script>
+</body>
+</html>

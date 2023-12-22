@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const arr = ['red', 'blue', 'pink']
+
+        // const newArr = arr.map(function (ele, index) {
+        //     console.log(ele);
+        //     console.log(index);
+        //     return ele + '颜色'
+        // })
+
+        const newArr_1 = arr.map((item, index,temp_arr) => {
+            console.log(item);
+            console.log(index);
+            console.log(temp_arr);
+            return item + '_color'
+        })
+
+        // console.log(newArr);
+        console.log(newArr_1);
+    </script>
+</body>
+
+</html>

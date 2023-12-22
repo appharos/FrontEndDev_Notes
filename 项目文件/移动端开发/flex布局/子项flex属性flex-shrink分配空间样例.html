@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flex Shrink Example</title>
+  <style>
+    section {
+      width: 400px;
+      height: 150px;
+      background-color: lightgray;
+      display: flex;
+    }
+
+    section div:nth-child(1) {
+      flex: 1 2 200px; /* flex-grow, flex-shrink, flex-basis */
+      background-color: red;
+    }
+
+    section div:nth-child(2) {
+      flex: 1 1 200px;
+      background-color: green;
+    }
+
+    section div:nth-child(3) {
+      flex: 1 1 200px;
+      background-color: blue;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </section>
+</body>
+</html>
+
+<!-- 
+  
+  ### 初始设置
+
+- 父元素（`section`）的宽度设置为 `400px`。
+- 子项 1、子项 2 和子项 3 的 `flex-basis` 都设置为 `200px`。
+- 子项 1 的 `flex-shrink` 值为 `2`，子项 2 和子项 3 的 `flex-shrink` 值为 `1`。
+
+### 计算初始宽度
+
+1. 子项 1、子项 2 和子项 3 的初始宽度（`flex-basis`）都是 `200px`。
+
+### 计算超出的空间
+
+- 总超出空间 = 所有子项的初始宽度 - 父元素宽度
+- 总超出空间 = `(200px + 200px + 200px) - 400px = 200px`
+
+### 计算每个子项的收缩空间
+
+- 子项 1 的 `flex-shrink` 是 `2`，子项 2 和子项 3 的 `flex-shrink` 是 `1`，所以总共是 `2 + 1 + 1 = 4` "份"。
+  
+- 子项 1 将收缩 `200px * (2 / 4) = 100px`。
+  
+- 子项 2 将收缩 `200px * (1 / 4) = 50px`。
+  
+- 子项 3 将收缩 `200px * (1 / 4) = 50px`。
+
+### 计算最终宽度
+
+- 子项 1 的最终宽度 = `200px（flex-basis） - 100px（收缩量） = 100px`
+  
+- 子项 2 的最终宽度 = `200px（flex-basis） - 50px（收缩量） = 150px`
+  
+- 子项 3 的最终宽度 = `200px（flex-basis） - 50px（收缩量） = 150px`
+
+最终，子项的宽度分别是 `100px`、`150px` 和 `150px`，完全符合 Flex 布局的规则。
+
+这个例子展示了当父元素空间不足时，如何使用 `flex-shrink` 属性来分配子项的收缩空间。希望这能帮助你更好地理解这个概念！有其他问题，随时提出。 -->

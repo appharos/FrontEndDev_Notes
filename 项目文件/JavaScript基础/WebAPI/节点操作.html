@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="grandfather">
+        <div class="father">
+            <div class="son">
+            </div>
+        </div>
+    </div>
+
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <script>
+        const son = document.querySelector('.son')
+ 
+        console.log(son);
+        console.log(son.parentNode);
+        console.log(son.parentNode.parentNode);
+
+        const temp_ul = document.querySelector('ul')
+        console.log(temp_ul.children);
+
+        const temp_li_1 = document.createElement('li')
+        const temp_li_2 = document.createElement('li')
+        temp_li_1.innerText = "我是临时创建的"
+        temp_li_2.innerText = "我是二次临时创建的"    
+
+        temp_ul.appendChild(temp_li_1)
+
+        // 如何始终追加到ul的第一个li的位置：1. 先获取ul的孩子节点数组 2. 再利用insertBefore(要插入的元素，在哪个元素前面)方法
+        temp_ul.insertBefore(temp_li_2,temp_ul.children[0])
+    </script>
+
+</body>
+
+</html>

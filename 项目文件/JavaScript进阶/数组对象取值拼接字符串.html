@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const spec = {
+            size: '40cm*40cm',
+            color: '黑色'
+        }
+
+        // 获取所有属性值 并将其返回一个数组
+        const temp_arr = Object.values(spec)
+        // 使用join方法，使用'/'分隔数组元素，并返回一个字符串
+        console.log(temp_arr.join('/'));
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+@green: #008c8c;
+@danger:#f40;
+@success:lightgreen;
+
+
+
+
+.list{
+    display: flex;
+    flex-wrap: wrap;
+    color: @green;
+
+
+    li{
+        margin: 1em;
+        &:hover{
+            background-color: @green;
+            color: #fff;
+        }
+    }
+}
+
+// 添加header样式逻辑
+.header{
+    color: black;
+    .navgation{
+        font-size: 12px;
+        h1{
+            font-size: 3em;
+        }
+    }
+    .logo{
+        width: 300px;
+        // 选定当前元素的hover样式(注意添加&符号，不然会变成后代元素)
+        &.hover{
+            width: 320px;
+        }
+    }
+
+
+}
+
+// 体验less的混合语法
+// 如不想将.round混合定义转换为css样式，应在名字后面添加（）
+// .round {
+//     border-radius: 5px;
+// }
+
+.round() {
+    border-radius: 5px;
+}
+
+.a{
+    .round();
+}
+
+.b {
+    .round();
+}        

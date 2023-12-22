@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // 解构语法
+        const obj = { uname: 'pink', age: 18 }
+        const { uname, uage } = { uname: 'pink', age: 18 }
+        // 等价于const uname = obj.uname
+        // 要求属性名和变量名必须一样才可以
+
+        console.log(uname);
+        console.log(uage);
+
+        // 对象的解构名可以重新改名   旧变量名：新变量名
+        const { uname: user_name, age: user_age } = { uname: 'pink', age: 18 }
+
+        console.log(user_name);
+        console.log(user_age);
+
+        // 数组对象解构
+        const pig = [{
+            pig_name: '佩奇',
+            pig_age: 6
+        }]
+
+        const [{ pig_name: pig_new_name, pig_age }] = pig
+        console.log(pig_new_name);
+        console.log(pig_age);
+
+
+        const goods = [
+            {
+                goodsName: '小米',
+                price: 1999
+            }
+        ]
+        const [{ goodsName, price }] = goods
+        console.log(goodsName);
+        console.log(price);
+
+        // 多级对象解构
+        const pig_2 = {
+            name: '佩奇',
+            family: {
+                mother: '猪妈妈',
+                father: '猪爸爸',
+                sister: '乔治',
+            },
+            age: 6
+        }
+
+        // const { name, family: { mother, father, sister } } = pig_2
+        //无法直接打印family  这段代码执行后，虽然 mother、father 和 sister 成为了独立的变量，
+        // 但是 family 本身并没有被声明为一个独立的变量。因此，当您尝试打印 family 时，会得到一个引用错误，因为在当前作用域中没有名为 family 的变量。
+        // console.log(family)   错误 
+        // console.log(name)
+        // console.log(mother)
+
+        // 多级对象数组解构
+        const person = [
+            {
+                name: '佩奇',
+                family: {
+                    mother: '猪妈妈',
+                    father: '猪爸爸',
+                    sister: '乔治',
+                },
+                age: 6
+            }
+        ]
+        const [{ name, family: { mother, father, sister } }] = person
+        console.log(father);
+
+
+    </script>
+</body>
+
+</html>

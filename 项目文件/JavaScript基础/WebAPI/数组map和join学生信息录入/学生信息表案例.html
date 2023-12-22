@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>学生信息管理</title>
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+
+<body>
+  <h1>新增学员</h1>
+  <form class="info" autocomplete="off">
+    姓名：<input type="text" class="uname" name="uname" />
+    年龄：<input type="text" class="age" name="age" />
+    性别:
+    <select name="gender" class="gender">
+      <option value="男">男</option>
+      <option value="女">女</option>
+    </select>
+    薪资：<input type="text" class="salary" name="salary" />
+    就业城市：<select name="city" class="city">
+      <option value="北京">北京</option>
+      <option value="上海">上海</option>
+      <option value="广州">广州</option>
+      <option value="深圳">深圳</option>
+      <option value="曹县">曹县</option>
+    </select>
+    <button class="add">录入</button>
+  </form>
+
+  <h1>就业榜</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>学号</th>
+        <th>姓名</th>
+        <th>年龄</th>
+        <th>性别</th>
+        <th>薪资</th>
+        <th>就业城市</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- 
+        <tr>
+          <td>1001</td>
+          <td>欧阳霸天</td>
+          <td>19</td>
+          <td>男</td>
+          <td>15000</td>
+          <td>上海</td>
+          <td>
+            <a href="javascript:">删除</a>
+          </td>
+        </tr> 
+        -->
+    </tbody>
+  </table>
+  <script>
+
+    // 声明一个对象数组来存放表单数据，方便后续操作
+
+
+    const arr_data = JSON.parse(localStorage.getItem('data')) || []
+
+
+    const data_name = document.querySelector('.uname')
+    const data_age = document.querySelector('.age')
+    const data_gender = document.querySelector('.gender')
+    const data_salary = document.querySelector('.salary')
+    const data_city = document.querySelector('.city')
+
+
+    const table_body = document.querySelector('table tbody')
+
+    const form = document.querySelector('.info')
+
+
+    form.addEventListener('submit', function (e) {
+      // 阻止form表单提交的默认跳转行为
+      e.preventDefault()
+
+      const name_arr = document.querySelectorAll('[name]')
+
+      for (let j = 0; j < name_arr.length; j++) {
+        if (name_arr[j].value === '')
+          return alert('输入内容不能为空！')
+      }
+
+
+      const obj = {
+        // 处理stuId:数据最后一条数据的stuId + 1  (非常巧妙)
+        stuId: arr_data.length ? arr_data[arr_data.length - 1].stuId + 1 : 1,
+        uname: data_name.value,
+        age: data_age.value,
+        gender: data_gender.value,
+        salary: data_salary.value,
+        city: data_city.value,
+      }
+
+
+      // console.log(obj)
+
+      // 学员数据追加给数组
+      arr_data.push(obj)
+      // console.log(arr_data);
+
+      localStorage.setItem('data', JSON.stringify(arr_data))
+
+
+      // 点击提交后，清空表单
+      this.reset()
+
+      // 调用渲染函数
+      render()
+
+
+
+    })
+
+
+    // 利用数据委托，完成删除数据操作
+    table_body.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') {
+
+        if (confirm('您确定要删除这条数据吗？')) {
+          // 利用自定义属性，选定点击的删除元素
+          arr_data.splice(e.target.dataset.id, 1)
+
+          localStorage.setItem('data', JSON.stringify(arr_data))
+
+          // 重新渲染一次
+          render()
+        }
+
+      }
+    })
+
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+      render();
+    });
+
+
+    // 渲染函数,增加和删除都需要渲染
+    function render() {
+
+      const local_data = JSON.parse(localStorage.getItem('data')) || []
+      // console.log(local_data);
+
+      const trArr = local_data.map((ele, index) => {
+        return `
+        <tr>
+          <td>${ele.stuId}</td>
+          <td>${ele.uname}</td>
+          <td>${ele.age}</td>
+          <td>${ele.gender}</td>
+          <td>${ele.salary}</td>
+          <td>${ele.city}</td>
+          <td><a href="javascript:" data-id=${index}>删除</a></td> 
+        </tr>
+        `
+      })
+
+      console.log(trArr)
+      table_body.innerHTML = trArr.join('')
+
+
+    }
+
+
+
+
+
+
+  </script>
+
+</body>
+
+</html>

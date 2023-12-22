@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let name = 'pink'
+    let password = 123456
+    let passwordStr = password.toString()
+    let user_name = prompt('请输入用户名：')
+    let user_password = prompt('请输入密码：')
+
+    if (name === user_name && passwordStr === user_password){
+      console.log("登录成功");
+    } 
+    else {
+      console.log('登录失败')
+    }
+  </script>
+</body>
+</html>

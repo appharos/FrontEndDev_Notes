@@ -1,0 +1,38 @@
+/* 多页面共享的样式代码 */
+@import "//at.alicdn.com/t/c/font_4216018_bw5goc8yqgd.css";
+
+
+body{
+    font-family: Helvetica, Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    
+}
+
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.hidden{
+    display: none;
+}
+
+.btn{
+    background: #00B51D;
+    color: #FFF;
+    border-radius: 4px;
+}
+
+.btn:disabled{
+    background-color: rgba(66,189,86,.5);
+    cursor: not-allowed;
+}

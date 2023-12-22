@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    button {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <textarea name="" id="" cols="30"
+    rows="10">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos similique necessitatibus, quas ratione ipsum porro, nisi, laboriosam illum alias ducimus dolorem nam eveniet ut consequuntur eligendi officia dolore nulla quasi animi vel unde corrupti! Et eos enim, eius provident iusto repellendus totam quam iste fugiat eaque nulla dolorum natus dolores tempore placeat, voluptatibus repellat maiores quos voluptate quo beatae veniam. Nam odit, nobis pariatur voluptates nihil ipsum amet molestiae quam aliquam corporis facere aperiam modi explicabo? Recusandae sapiente quidem facere! Reiciendis soluta autem recusandae nihil magni adipisci repellendus similique, nobis excepturi suscipit officiis dolorem facilis ut voluptatibus laudantium, eaque quidem minus veritatis neque provident nostrum sapiente molestiae beatae? Saepe voluptates cupiditate ipsa culpa, laborum necessitatibus molestias, maxime ratione itaque consequatur consequuntur rem repudiandae! Blanditiis aut veritatis, velit cupiditate vel nemo obcaecati. Autem reiciendis eligendi, id fugit nobis hic cumque eveniet recusandae nulla eius neque dicta perspiciatis alias vitae nemo inventore ut! Autem odio officia quis laborum magni expedita inventore. Illo magni vitae voluptates consectetur iste deleniti, provident numquam dolorem iusto distinctio, rerum maiores cum consequatur maxime commodi? Placeat id amet nulla expedita in voluptas cumque, inventore impedit consectetur porro temporibus fugiat! Voluptate delectus incidunt blanditiis aliquid, deserunt quaerat asperiores voluptates.</textarea>
+  <button disabled>已阅读用户协议(60)</button>
+  <script>
+    const btn = document.querySelector('button')
+    let count = 60
+    let intervalId = setInterval(function () {
+      count--
+      btn.innerText = `已阅读用户协议(${count})`
+      if (count == 0) {
+        clearInterval(intervalId)
+        btn.innerText = '同意'
+        btn.disabled = false
+      }
+    }, 1000)
+  </script>
+</body>
+
+</html>
