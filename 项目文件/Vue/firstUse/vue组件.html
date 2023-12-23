@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app"></div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+    <script>
+
+        //配置组件
+        const MyButton = {
+            data() {
+                return {
+                    count: 0,
+                };
+            },
+            template: `<button @click='count++'> 当前点击了{{count}}次</button>`,
+        };
+
+        // 全局注册一个组件
+        // Vue.component("my-button", myButton)
+
+        // 配置组件props属性
+        const Title = {
+            props: ['biaoti'],
+            template: `<h1>{{biaoti}}</h1>`
+        };
+
+
+
+        const vm = new Vue({
+            components: {
+                //局部注册组件
+                // 当对象的属性名和变量名（存储属性值的变量）相同时，您可以使用属性值缩写，只写一次名称，这会被解释为属性名和变量名相同。
+                MyButton,
+                "Title": Title,
+            },
+            template: `
+                <div>
+                <MyButton />
+                <MyButton />
+                <Title biaoti='标题1' />
+                <Title biaoti='标题2' />
+                <Title biaoti='标题3' />
+                </div> 
+            `,
+        });
+
+        vm.$mount('#app')
+
+
+    </script>
+</body>
+
+</html>
