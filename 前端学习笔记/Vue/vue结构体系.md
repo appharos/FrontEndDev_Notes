@@ -99,3 +99,9 @@
 3. template： 配置模板
 4. render:  渲染方法，用于生成虚拟vnode
 5. el: 用于绑定挂载元素
+6. components: 用来注册组件
+
+7. props:  
+
+1) 声明组件的属性
+2) 多种形式： 数组 ，对象 （vue文档可查属性的约束方式：<https://v2.cn.vuejs.org/v2/guide/components-props.html#Prop-%E9%AA%8C%E8%AF%81）>
