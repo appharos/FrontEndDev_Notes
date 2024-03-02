@@ -9,7 +9,7 @@
 
 <body>
     <div id="app"></div>
-
+    <div id="app1"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
     <script>
@@ -24,10 +24,23 @@
             template: `<button @click='count++'> 当前点击了{{count}}次</button>`,
         };
 
-        // 全局注册一个组件
-        // Vue.component("my-button", myButton)
+        // //全局注册一个组件
+        // Vue.component("my-button", MyButton)
 
-        // 配置组件props属性
+        const vm = new Vue({
+            template: `<div>
+                <my-button />
+                <my-button />
+                <my-button />
+                <my-button />
+                </div>`,
+            el: "#app",
+            components: {
+                // 局部注册组件
+                'my-button': MyButton,
+            },
+        })
+        //配置组件props属性
         const Title = {
             props: ['biaoti'],
             template: `<h1>{{biaoti}}</h1>`
@@ -35,7 +48,7 @@
 
 
 
-        const vm = new Vue({
+        const vm1 = new Vue({
             components: {
                 //局部注册组件
                 // 当对象的属性名和变量名（存储属性值的变量）相同时，您可以使用属性值缩写，只写一次名称，这会被解释为属性名和变量名相同。
@@ -49,11 +62,11 @@
                 <Title biaoti='标题1' />
                 <Title biaoti='标题2' />
                 <Title biaoti='标题3' />
-                </div> 
+                </div>
             `,
         });
 
-        vm.$mount('#app')
+        vm1.$mount('#app1')
 
 
     </script>

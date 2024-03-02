@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <div id="app">
+    <!-- <div id="app">
         <img v-bind:src="url" alt="">
     </div>
 
@@ -24,6 +24,22 @@
         })
         // 挂载虚拟DOM树
         vm.$mount('#app')
+    </script> -->
+
+    <div id="app">
+        <img :src="image" alt="">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+    <script>
+        var vm = new Vue({
+            data: {
+                image: 'https://img0.baidu.com/it/u=1765992387,2249874709&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto?sec=1708621200&t=cc26b8405fab8a80a82a27382b80396c'
+            },
+            el: "#app",
+
+        });
+        // vm.$mount('#app')
     </script>
 
 </body>
