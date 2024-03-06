@@ -6,6 +6,14 @@
 
 const classMap = {
     empty: 'icon-wushuju',
+    qq: 'icon-QQ-circle-fill',
+    mail: 'icon-youxiang',
+    wechat: 'icon-logo-wechat',
+    github: 'icon-github',
+    blog: "icon-wenzhang",
+    about: "icon-cuowutishi-copy",
+    message: 'icon-liuyanban',
+    home:'icon-xiazai45',
 }
 
 export default {
@@ -26,7 +34,7 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import '//at.alicdn.com/t/c/font_4450711_tmi0kek5geb.css';
+@import '//at.alicdn.com/t/c/font_4450711_makyjwk07ea.css';
 .iconfont {
   color: inherit;
   font-size: inherit;

@@ -23,4 +23,3 @@ git branch -d 分支名         删除分支（请确保记录已经合并到别
 git checkout 分支名         切换分支
 git checkout -b 分git 支名      创建并立刻切换分支
 git merge 分支名             把分支提交历史记录合并到当前所在分支
-gti 

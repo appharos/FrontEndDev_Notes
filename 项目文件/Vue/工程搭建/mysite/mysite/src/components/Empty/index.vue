@@ -13,7 +13,7 @@ export default {
     props: {
         text: {
             type: String,
-            default:"无数据",
+            default:"无数据",  
         }
     },
     components: {
@@ -39,7 +39,6 @@ export default {
     .text{
         margin-top: 10px;
     }
-    
-    
+     
 }
 </style>

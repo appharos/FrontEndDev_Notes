@@ -3,10 +3,10 @@
 转换（transform）是CSS3中最具颠覆性的特征之一，可以实现元素的位移、旋转、缩放等效果
 
 转换分为：
+
 - 移动translate
 - 旋转 rotate
 - 缩放 scale
-
 
 ## 2D 转换
 
@@ -19,7 +19,8 @@ transform: translate(x,y); 或者分开写
 transform: translateX(n);
 transform；translateY(n);
 
-例： 
+例：
+
 ```css
 /* 平移元素 */
 .translate-box {
@@ -27,6 +28,7 @@ transform；translateY(n);
     /* 方向(水平向右为x轴正方向,垂直向下为y轴正方向) */
 }
 ```
+
 **重点**
 
 1) 定义2D转换中的移动，沿着X和Y轴移动元素
@@ -34,8 +36,8 @@ transform；translateY(n);
 3) translate中的百分比单位是相对于**自身元素**的translate:(50%,50%);
 4) 对行内标签没有效果
 
-
 translate法实现元素水平垂直居中
+
 ```css
     .father{
       width: 500px;
@@ -71,8 +73,6 @@ transform: rotate(度数)
 2) 角度为正时，顺时针，负时，为逆时针
 3) 默认旋转的中心点是元素的中心点
 
-
-
 3. 2D转换中心点  transform-origin
   
 transform-origin 属性用于指定元素的变换基点，即在应用 CSS 变换时元素围绕的点。它控制了元素变换的中心点。
@@ -86,7 +86,6 @@ transform-origin: x y;
 1) 注意后面的参数x和y用空格隔开
 2) x y 默认转换的中心点是元素的中心点(50% 50%)(或者是(center,center))
 3) 还可以给x y 设置像素或者方位名词 (top bottom left right center)
-
 
 ```css
     .test{
@@ -163,7 +162,6 @@ ChatGPT解释:
 ```
 
 这将以当前尺寸为基础，分别对水平和垂直方向进行不同的缩放。
-
 
 5. 2D转换综合写法
 
